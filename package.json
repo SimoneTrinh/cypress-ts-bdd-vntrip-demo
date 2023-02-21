@@ -1,0 +1,29 @@
+{
+  "author": "Simone",
+  "license": "ISC",
+  "description": "",
+  "name": "cy-ts-bdd-test-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^12.6.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/steps/**/*.{js,ts}",
+      "cypress/pages/**/*.{js,ts}"
+    ],
+    "json": {
+      "enabled": true
+    }
+  }
+}
